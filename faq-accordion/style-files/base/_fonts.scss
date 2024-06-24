@@ -1,0 +1,11 @@
+:root {
+  --font-weight-regular: 400;
+  --font-weight-medium: 600;
+  --font-weight-bold: 700;
+
+  --font-primary: "Work Sans";
+}
+
+html {
+  font-family: var(--font-primary), "sans-serif";
+}

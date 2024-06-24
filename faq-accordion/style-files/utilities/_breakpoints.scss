@@ -1,0 +1,7 @@
+@use "functions" as f;
+
+@mixin breakpoint-desktop {
+  @media screen and (min-width: f.toEm(1440)) {
+    @content
+  }
+}

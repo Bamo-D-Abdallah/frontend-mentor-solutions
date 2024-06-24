@@ -1,0 +1,11 @@
+@use "functions" as f;
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: f.toRem(20);
+}
+
+
+

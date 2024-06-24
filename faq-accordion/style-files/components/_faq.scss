@@ -1,0 +1,71 @@
+@use "../utilities" as u;
+
+.faq {
+  @include u.flex-column;
+  align-items: center;
+
+
+  &__container {
+    @include u.flex-column;
+    width: 80%;
+    justify-content: space-around;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--color-grayish-purple);
+    }
+
+    &__question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &__header {
+        font-weight: var(--font-weight-medium);
+      }
+    }
+
+    &__answer {
+      max-height: 0;
+      transform: scaleY(0);
+      transition: ease-out 50ms;
+
+
+      &--active {
+        max-height: 100%;
+        transform: scaleY(1);
+        transition: ease-out 50ms;
+
+      }
+    }
+  }
+
+
+  &__title-icon {
+
+    &__img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+
+    &__text {
+      font-size: clamp(2rem, 5vw, 4rem);
+      font-weight: var(--font-weight-bold);
+    }
+  }
+
+  &__question {
+    display: flex;
+    justify-content: space-between;
+
+    &__header {
+
+    }
+
+  }
+
+}
