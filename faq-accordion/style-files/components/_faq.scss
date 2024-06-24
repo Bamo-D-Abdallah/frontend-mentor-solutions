@@ -1,17 +1,35 @@
 @use "../utilities" as u;
 
+$spacing: 20;
+
+%padding-spacing {
+  padding: u.toEm($spacing) 0;
+}
+
 .faq {
   @include u.flex-column;
-  align-items: center;
+  padding: u.toEm(25);
+  background-color: var(--color-white);
+  border-radius: 1.5vw;
+  width: 90%;
+
+  @include u.breakpoint-desktop {
+    width: 50vw;
+  }
+
+
+  align-items: flex-start;
 
 
   &__container {
     @include u.flex-column;
-    width: 80%;
+    width: 100%;
     justify-content: space-around;
+    @extend %padding-spacing;
 
     &:not(:last-child) {
-      border-bottom: 1px solid var(--color-grayish-purple);
+      border-bottom: 1px solid var(--color-light-pink);
+
     }
 
     &__question {
@@ -20,20 +38,44 @@
       justify-content: space-between;
 
       &__header {
+        color: var(--color-dark-purple);
         font-weight: var(--font-weight-medium);
+        font-size:clamp(1.1rem, 5vw, 1.2rem);
+        width: 70%;
+
+        @include u.breakpoint-desktop {
+          width: 95%;
+        }
+
+        &:hover {
+          color: #AD28EB;
+        }
+
+      }
+
+      &__icon {
+        &:hover {}
+        cursor: pointer;
       }
     }
 
     &__answer {
       max-height: 0;
+      color: var(--color-grayish-purple);
       transform: scaleY(0);
+      padding: 0;
       transition: ease-out 50ms;
+      line-height: 1.5;
+      font-size: clamp(1rem, 5vw, 1.05rem);
+
 
 
       &--active {
         max-height: 100%;
+        padding: u.toEm($spacing) 0 0 0;
         transform: scaleY(1);
         transition: ease-out 50ms;
+
 
       }
     }
@@ -41,9 +83,11 @@
 
 
   &__title-icon {
+    width: 20%;
+
 
     &__img {
-      width: 100%;
+      max-width: 100%;
       height: auto;
     }
   }
@@ -51,6 +95,10 @@
   &__title {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+    @extend %padding-spacing;
+    column-gap: u.toEm(25);
+
 
     &__text {
       font-size: clamp(2rem, 5vw, 4rem);
@@ -61,10 +109,6 @@
   &__question {
     display: flex;
     justify-content: space-between;
-
-    &__header {
-
-    }
 
   }
 

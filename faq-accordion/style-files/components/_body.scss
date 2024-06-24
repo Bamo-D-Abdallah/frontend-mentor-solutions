@@ -1,0 +1,15 @@
+@use "../utilities" as u;
+
+body {
+  height: 100vh;
+  background-color: var(--color-light-pink);
+  background-image: url("assets/images/background-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  font-family: var(--font-primary), sans-serif;
+
+  @include u.breakpoint-desktop {
+    background-image: url("assets/images/background-pattern-desktop.svg");
+  }
+}
+
+

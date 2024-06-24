@@ -1,0 +1,17 @@
+@use "../utilities" as u;
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+
+  @include u.breakpoint-desktop {
+    height: 75vh;
+  }
+
+}
+
+
