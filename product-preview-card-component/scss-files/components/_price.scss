@@ -1,0 +1,21 @@
+@use "../utils" as utils;
+
+.card__section2__price {
+  display: flex;
+  align-items: center;
+  column-gap: utils.toEm(16);
+
+  &__discount {
+    font-size: utils.toRem(29);
+    color: var(--color-dark-cyan);
+    font-weight: var(--font-weight-bold);
+    font-family: var(--font-family-fraunces), "sans-serif";
+  }
+
+  &__actual {
+    font-size: utils.toRem(13);
+    color: var(--color-dark-grayish-blue);
+    text-decoration: line-through;
+    font-family: var(--font-family-montserrat), "sans-serif";
+  }
+}

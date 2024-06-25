@@ -1,0 +1,24 @@
+@use "../utils";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 95%;
+  background-color: var(--color-white);
+  border-radius: 2%;
+  overflow: hidden;
+
+  @include utils.desktop-size {
+    flex-direction: row;
+
+    min-height: utils.toEm(451);
+
+    height: 35%;
+
+    min-width: utils.toEm(700);
+    width: 50%;
+
+  }
+
+}

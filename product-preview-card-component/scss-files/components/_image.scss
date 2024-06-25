@@ -1,0 +1,26 @@
+@use "../utils";
+
+.card__section1 {
+  width: 100%;
+
+  & > img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__image__mobile {
+    display: block;
+    @include utils.desktop-size {
+      display: none;
+    }
+  }
+
+  &__image__desktop {
+    display: none;
+    @include utils.desktop-size {
+      display: block;
+    }
+  }
+
+
+}

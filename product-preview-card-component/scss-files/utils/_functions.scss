@@ -1,0 +1,18 @@
+@use "sass:math";
+
+@function toRem($px) {
+  @if math.is-unitless($px) {
+    @return math.div($px, 14) + rem;
+  } @else {
+    @error "Don't pass 'px' unit with the number";
+  }
+}
+
+
+@function toEm($px) {
+  @if math.is-unitless($px) {
+    @return math.div($px, 14) + em;
+  } @else {
+    @error "Don't pass 'px' unit with the number";
+  }
+}
