@@ -122,6 +122,7 @@ table {
 }
 .faq__container__question__header:hover {
   color: #AD28EB;
+  cursor: pointer;
 }
 .faq__container__question__icon {
   cursor: pointer;
