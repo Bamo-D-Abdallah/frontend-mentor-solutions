@@ -1,7 +1,8 @@
 const faqIcons = document.querySelectorAll(".faq__container__question__icon");
 
 faqIcons.forEach(icon => {
-    icon.addEventListener("click", () => {
+    const questionContainer = icon.parentElement;
+    questionContainer.addEventListener("click", () => {
 
         const answer = icon.parentElement.parentElement.lastElementChild;
 
