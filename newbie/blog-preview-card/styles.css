@@ -1,0 +1,203 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+img {
+    width: 100%;
+}
+
+:root {
+    --color-yellwo: hsl(47, 88%, 63%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-grey: hsl(0, 0%, 50%);
+    --color-black: hsl(0, 0%, 7%);
+
+    --font-family: "Figtree";
+    --font-weight-bold: 800;
+    --font-weight-regular: 500;
+}
+
+
+
+body {
+    height: 100vh;
+    background-color: var(--color-yellwo);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    font-family: var(--font-family), sans-serif;
+}
+
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 2em;
+}
+
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+.card {
+    background-color: var(--color-white);
+    width: 100%;
+    padding: 1.25rem;
+    border-radius: 2vmax;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    row-gap: 1.5em;
+    box-shadow: 0.5em 0.5em var(--color-black);
+    border: 0.12em solid var(--color-black);
+}
+
+
+.card__image {
+    border-radius: 1vmax;
+    overflow: hidden;
+    width: 100%;
+}
+
+
+.card__tag {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    background-color: var(--color-yellwo);
+    text-align: center;
+    padding: 0.6em;
+    border-radius: 0.3em;
+}
+
+
+.card__date {
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    font-weight: var(--font-weight-regular);
+}
+
+.card__header {
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+}
+
+
+.card__header:hover {
+    color: var(--color-yellwo);
+    cursor: pointer;
+}
+
+
+.card__body {
+    font-size: clamp(1rem, 2vw, 1rem);
+    line-height: 1.5;
+    color: var(--color-grey);
+}
+
+
+.card__author-container {
+    display: flex;
+    column-gap: 1em;
+    align-items: center;
+}
+
+.card__author-image {
+    width: 10%;
+}
+
+
+.card__tag,
+.card__header,
+.card__author-name {
+    font-weight: var(--font-weight-bold);
+}
+
+
+
+@media (min-width: 23.4375em) {
+    .card {
+        max-width: 23rem;
+    }
+
+    .card__tag {
+        max-width: 5.5rem;
+    }
+}
+
+
+
+@media (min-width: 47em) {
+    .card {
+        max-width: 25rem;
+        box-shadow: 0.7em 0.7em var(--color-black);
+    }
+
+    .card__tag {
+        max-width: 7rem;
+    }
+
+
+}
+
+
+
+
+
+
+

@@ -1,0 +1,25 @@
+@forward "style-files";
+
+
+.default {
+  color: revert;
+  display: inline-grid;
+  grid-template-columns: [nav-start]200px [nav-end contact-start] 300px [contact-end];
+  grid-template-areas:
+  "item1 . . item2"
+  "item1 . . item2"
+;
+  all: unset;
+}
+
+
+.item1 {
+  grid-area: item1;
+}
+
+.item2 {
+  grid-row: 1 / 2;
+  grid-column: 3 / span 2;
+
+}
+
