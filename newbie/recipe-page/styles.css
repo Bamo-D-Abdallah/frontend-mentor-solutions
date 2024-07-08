@@ -110,7 +110,7 @@ main {
 }
 @media (min-width: 61.4285714286em) {
   main {
-    padding: 1.25em;
+    padding: 1.5em 1.25em;
     margin-top: 4rem;
     margin-bottom: 4rem;
     border-radius: 1em;

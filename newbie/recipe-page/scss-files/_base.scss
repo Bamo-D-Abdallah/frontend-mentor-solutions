@@ -31,7 +31,7 @@ main {
   background-color: var(--color-white);
 
   @include breakpoints.desktop_size {
-    padding: 1.25em;
+    padding: 1.5em 1.25em;
     margin-top: 4rem;
     margin-bottom: 4rem;
     border-radius: 1em;
