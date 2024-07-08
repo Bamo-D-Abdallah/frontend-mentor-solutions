@@ -1,0 +1,38 @@
+
+.nutrition {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.2em;
+
+  &__header {
+    font-family: var(--font-family-young-serif), sans-serif;
+    font-size: 2rem;
+    color: var(--color-nutmeg);
+  }
+
+  &__paragraph {
+    color: var(--color-dark-charcoal);
+    font-family: var(--font-family-outfit), sans-serif;
+    line-height: 1.5;
+  }
+
+
+  tr:not(:last-child)  {
+    border-bottom: solid 0.1em var(--color-light-grey);
+  }
+
+  &__name {
+    color: var(--color-dark-charcoal);
+    font-family: var(--font-family-outfit), sans-serif;
+    padding: 1em 1em;
+
+
+  }
+
+  &__amount {
+    color: var(--color-nutmeg);
+    font-weight: var(--fw-bolder);
+    font-family: var(--font-family-outfit), sans-serif;
+    padding: 1em 0;
+  }
+}

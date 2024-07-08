@@ -1,0 +1,66 @@
+@use "breakpoints";
+@use "functions";
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: var(--color-eggshell);
+
+  @include breakpoints.desktop_size {
+    justify-content: center;
+
+  }
+}
+
+.omelette-image {
+  align-self: center;
+  width: 100%;
+  overflow: hidden;
+
+  @include breakpoints.desktop_size {
+    max-width:  functions.toRem(550);
+    border-radius: 1em;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-white);
+
+  @include breakpoints.desktop_size {
+    padding: 1.25em;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    border-radius: 1em;
+    max-width: functions.toRem(600);
+
+
+  }
+}
+
+.content {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5em;
+}
+
+.site-header {
+  font-family: var(--font-family-young-serif), sans-serif;
+  font-size: clamp(2rem, 2vw, 2.2rem);
+  color: var(--color-dark-charcoal);
+}
+
+.site-paragraph {
+  color: var(--color-wenge-brown);
+  font-size: 1rem;
+  font-family: var(--font-family-outfit), sans-serif;
+  line-height: 1.5;
+}
+
+strong {
+  font-weight: var(--fw-bolder);
+}

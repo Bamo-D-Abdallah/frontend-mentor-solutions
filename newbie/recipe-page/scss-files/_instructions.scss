@@ -1,0 +1,29 @@
+@use "functions";
+
+.instructions {
+  border-bottom: solid 0.1em var(--color-light-grey);
+  padding-bottom: 1.5em;
+
+  &__header {
+    font-family: var(--font-family-young-serif), sans-serif;
+    font-size: functions.toRem(28);
+    color: var(--color-nutmeg);
+  }
+
+  &__list-container {
+    list-style-type: decimal;
+    margin-left: 1.5em;
+  }
+
+  &__list-item {
+    color: var(--color-wenge-brown);
+    line-height: 1.5;
+    font-family: var(--font-family-outfit), sans-serif;
+    padding: 0.4em 0;
+
+    &::marker {
+      font-weight: var(--fw-bold);
+      color: var(--color-nutmeg);
+    }
+  }
+}

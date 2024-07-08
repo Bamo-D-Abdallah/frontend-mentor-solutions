@@ -1,0 +1,8 @@
+@use "functions";
+
+
+@mixin desktop_size {
+  @media (min-width: functions.toEm(860)) {
+    @content
+  }
+}
