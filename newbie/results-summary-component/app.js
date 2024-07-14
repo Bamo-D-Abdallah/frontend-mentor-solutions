@@ -17,6 +17,7 @@ const categoryContainer = document.querySelector('.result-card__category-contain
 
         const categoryIconElement = document.createElement("img");
         categoryIconElement.src = categories[i].icon;
+        categoryIconElement.setAttribute("alt", "Icon of the category");
         categoryIconElement.classList.add("result-card__category-icon");
 
         const categoryTextElement = document.createElement("p");
