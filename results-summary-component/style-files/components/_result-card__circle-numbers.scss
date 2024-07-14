@@ -1,0 +1,36 @@
+@use "../utils" as utils;
+
+
+
+.result-card__circle-numbers {
+  border-radius: 50%;
+  background-image: linear-gradient(
+                  to bottom,
+                  var(--color-gradient-background-violet-blue),
+                  var(--color-gradient-background-violet-blue),
+                  var(--color-gradient-background-royal-blue));
+  width: 7em;
+  height: 7em;
+  @include utils.desktop-size {
+    width: 10em;
+    height: 10em;
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+
+.result-card__big-number {
+  font-size: clamp(2.5rem, 3vw, 3rem);
+  color: var(--color-pale-blue);
+  font-weight: var(--font-weight-bolder);
+}
+
+
+.result-card__small-number {
+  color: var(--color-light-lavender);
+  font-size: clamp(0.75rem, 3vw, 1rem);
+}

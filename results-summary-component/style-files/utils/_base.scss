@@ -1,0 +1,16 @@
+@use "breakpoints";
+@use "functions";
+
+body {
+  height: 100vh;
+
+  background-color: var(--color-pale-blue);
+  font-family: var(--font-family-primary), sans-serif;
+
+  @include breakpoints.desktop-size {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

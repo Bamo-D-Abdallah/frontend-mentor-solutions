@@ -79,6 +79,20 @@ img {
   --fw-bolder: 700;
 }
 
+.button {
+  width: 100%;
+}
+
+@media (min-width: 50em) {
+  .button {
+    max-width: 10rem;
+  }
+}
+@media (min-width: 50em) {
+  .button {
+    max-width: 15rem;
+  }
+}
 body {
   display: flex;
   flex-direction: column;

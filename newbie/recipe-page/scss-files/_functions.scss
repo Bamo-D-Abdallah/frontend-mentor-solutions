@@ -17,3 +17,25 @@
     @error "Don't pass 'px' unit with the number";
   }
 }
+
+
+
+
+
+.button {
+  width: 100%
+}
+
+
+@media (min-width: 50em) {
+  .button {
+    max-width: 10rem;
+  }
+}
+
+@media (min-width: 50em) {
+  .button {
+    max-width: 15rem;
+  }
+}
+

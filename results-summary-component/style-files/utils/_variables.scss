@@ -1,24 +1,113 @@
+@use "sass:map";
+@use 'sass:color';
+
+
+$colors: (
+        "light-red": hsl(0, 100%, 67%),
+        "orangey-yellow": hsl(39, 100%, 56%),
+        "green-teal": hsl(166, 100%, 37%),
+        "cobalt-blue": hsl(234, 85%, 45%),
+
+        "violet-blue": hsla(256, 72%, 46%, 1),
+        "persian-blue": hsla(241, 72%, 46%, 0),
+
+        "white": hsl(0, 0%, 100%),
+        "pale-blue": hsl(221, 100%, 96%),
+        "light-lavender": hsl(241, 100%, 89%),
+        "dark-grey-blue": hsl(224, 30%, 27%)
+
+
+);
+
+$gradient-colors: (
+        "slate-blue": hsl(252, 100%, 67%),
+        "royal-blue": hsl(241, 81%, 54%),
+        "violet-blue": hsla(256, 72%, 46%, 1)
+);
+
+
+
+$font-weights: (
+        "regular": 500,
+        "bold": 700,
+        "bolder": 800
+);
+
+$alpha-value: -0.9;
+
 :root {
-  --color-light-red: hsl(0, 100%, 67%);
-  --color-orangey-yellow: hsl(39, 100%, 56%);
-  --color-green-teal: hsl(166, 100%, 37%);
-  --color-cobalt-blue: hsl(234, 85%, 45%);
+  --color-light-red: #{map.get($colors, "light-red")};
+  --color-transparent-red: #{color.adjust(map.get($colors, "light-red"), $alpha: $alpha-value)};
 
-  --color-gradient-background-slate-blue: hsl(252, 100%, 67%);
-  --color-gradient-background-royal-blue: hsl(241, 81%, 54%);
+  --color-orangey-yellow: #{map.get($colors, "orangey-yellow")};
+  --color-transparent-orangey-yellow: #{color.adjust(map.get($colors, "orangey-yellow"), $alpha: $alpha-value)};
 
-  --color-gradient-circle-violet-blue: hsla(256, 72%, 46%, 1);
-  --color-gradient-circle-persian-blue: hsla(241, 72%, 46%, 0);
+  --color-green-teal: #{map.get($colors, "green-teal")};
+  --color-transparent-green-teal: #{color.adjust(map.get($colors, "green-teal"), $alpha: $alpha-value)};
 
 
-  --color-white: hsl(0, 0%, 100%);
-  --color-pale-blue: hsl(221, 100%, 96%);
-  --color-light-lavender: hsl(241, 100%, 89%);
-  --color-dark-grey-blue: hsl(224, 30%, 27%);
+  --color-cobalt-blue: #{map.get($colors, "cobalt-blue")};
+  --color-transparent-cobalt-blue: #{color.adjust(map.get($colors, "cobalt-blue"), $alpha: $alpha-value)};
 
-  --font-weight-regular: 500;
-  --font-weight-bold: 700;
-  --font-weight-bolder: 800;
+
+  --color-white: #{map.get($colors, "white")};
+  --color-pale-blue: #{map.get($colors, "pale-blue")};
+  --color-light-lavender: #{map.get($colors, "light-lavender")};
+  --color-dark-grey-blue: #{map.get($colors, "dark-grey-blue")};
+  --color-transparent-dark-grey-blue: #{color.adjust(map.get($colors, "dark-grey-blue"), $alpha: -0.5)};
+
+
+  --color-gradient-background-slate-blue: #{map.get($gradient-colors, "slate-blue")};
+  --color-gradient-background-royal-blue: #{map.get($gradient-colors, "royal-blue")};
+  --color-gradient-background-violet-blue: #{map.get($gradient-colors, "violet-blue")};
+
+
+  --color-gradient-circle-violet-blue: #{map.get($colors, "violet-blue")};
+  --color-gradient-circle-persian-blue: #{map.get($colors, "persian-blue")};
+
+
+
+
+  --font-weight-regular: #{map.get($font-weights, "regular")};
+  --font-weight-bold: #{map.get($font-weights, "bold")};
+  --font-weight-bolder: #{map.get($font-weights, "bolder")};
 
   --font-family-primary: "Hanken Grotesk";
+
+}
+
+
+
+.red-color {
+  color: var(--color-light-red);
+}
+
+.red-background {
+  background-color: var(--color-transparent-red);
+}
+
+
+.yellow-color {
+  color: var(--color-orangey-yellow);
+}
+
+.yellow-background {
+  background-color: var(--color-transparent-orangey-yellow);
+}
+
+
+.green-color {
+  color: var(--color-green-teal);
+}
+
+.green-background {
+  background-color: var(--color-transparent-green-teal);
+}
+
+.blue-color {
+  color: var(--color-cobalt-blue);
+}
+
+.blue-background {
+  background-color: var(--color-transparent-cobalt-blue);
 }

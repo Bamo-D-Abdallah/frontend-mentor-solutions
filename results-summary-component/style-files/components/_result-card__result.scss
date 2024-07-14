@@ -1,4 +1,36 @@
+@use "../utils";
+
 .result-card__result {
-  background-color: var(--color);
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.25em;
+  justify-content: space-evenly;
+  align-items: center;
+  background: linear-gradient(to bottom, var(--color-gradient-background-slate-blue), var(--color-gradient-background-royal-blue));
+  border-radius: 0 0 2em 2em;
+  padding: 2.5em;
+
+
+  @include utils.desktop-size {
+    max-width: 20rem;
+    border-radius: 2em;
+  }
+
+}
+
+
+
+.result-card__status {
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  color: var(--color-white);
+  font-weight: var(--font-weight-bold);
+}
+
+
+.result-card__description {
+  font-size: 0.9rem;
+  line-height: 1.25;
+  color: var(--color-light-lavender);
+  text-align: center;
 }
 

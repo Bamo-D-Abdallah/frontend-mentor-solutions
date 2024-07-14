@@ -1,7 +1,9 @@
 @use "functions" as functions;
 
 @mixin desktop-size {
-  @media (min-width: functions.toRem(376)) {
+  @media (min-width: functions.toRem(800)) {
     @content
   }
 }
+
+

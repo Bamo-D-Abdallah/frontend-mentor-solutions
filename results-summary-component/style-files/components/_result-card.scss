@@ -1,5 +1,20 @@
+@use "../utils" as utils;
+
 .result-card {
-  height: 100%;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-white);
+
+
+
+  &__result-header {
+    color: var(--color-light-lavender);
+    font-size: clamp(1rem, 3vw, 1.25rem);
+  }
+
+  @include utils.desktop-size {
+    flex-direction: row;
+    border-radius: 2em;
+  }
 }
 
