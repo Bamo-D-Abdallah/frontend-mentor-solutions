@@ -1,0 +1,65 @@
+@use "sass:map";
+@use 'sass:color';
+
+
+$colors: (
+        "white": hsl(0, 0%, 100%),
+        light_grey: hsl(217, 12%, 63%),
+        "orange": hsl(25, 97%, 53%),
+        dark_blue: hsl(213, 19%, 18%),
+        very_dark_blue: hsl(216, 12%, 8%)
+);
+
+
+
+$font-weights: (
+        regular: 400,
+        bold: 700
+);
+
+
+
+:root {
+  /* Font families */
+  --font-primary: Overpass;
+
+  /* Font weights */
+  --font-weight-regular: #{map.get($font-weights, "regular")};
+  --font-weight-bold: #{map.get($font-weights, "bold")};
+
+
+  /* Font sizes */
+  --font-size-header: 1.5rem;
+  --font-size-paragraph: 0.75rem;
+  --font-size-submit: 0.75rem;
+  --font-size-button-numbers: 0.75rem;
+
+
+  /* Colors */
+  --color-white: #{map.get($colors, "white")};
+  --color-light-grey: #{map.get($colors, "light_grey")};
+  --color-orange: #{map.get($colors, "orange")};
+  --color-dark-blue: #{map.get($colors, "dark_blue")};
+  --color-very-dark-blue: #{map.get($colors, "very_dark_blue")};
+
+
+  /* Padding */
+  --pading-icon-: 0.75em;
+  --padding-rating-buttons: 1em;
+  --padding-submit-button: 0.5em;
+  --padding-submit-card: 2em;
+
+  /* Border Radius */
+  --border-radius-submit-card: 1em;
+  --border-radius-icon: 50%;
+  --border-radius-rating-numbers: 50%;
+  --border-radius-submit-button: 2em;
+
+
+  /* Gaps */
+  --gap-row-submit-card: 1em;
+  --gaps-column-rating-buttons: 1.5em;
+
+}
+
+
