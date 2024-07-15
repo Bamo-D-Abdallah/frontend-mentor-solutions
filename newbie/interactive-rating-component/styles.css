@@ -114,6 +114,11 @@ p, h1, h2, h3, h4, h5, h6 {
   background-color: var(--color-orange);
   border-radius: var(--border-radius-submit-button);
 }
+@media (min-width: 50rem) {
+  .submit-card {
+    max-width: 25.75rem;
+  }
+}
 
 body {
   height: 100vh;
