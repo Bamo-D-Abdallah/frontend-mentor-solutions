@@ -6,10 +6,10 @@
   flex-direction: column;
   gap: var(--gap-submit-card);
   background-image: linear-gradient(to bottom, #232A34, #181E27);
-  row-gap: var(--gap-row-submit-card);
+  row-gap: var(--gap-row-card);
 
-  padding: var(--padding-submit-card);
-  border-radius: var(--border-radius-submit-card);
+  padding: var(--padding-cards);
+  border-radius: var(--border-radius-card);
   width: 90%;
 
 
@@ -36,12 +36,28 @@
   &__rating-container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     column-gap: var(--gaps-column-rating-buttons);
     list-style-type: none;
     padding: 0;
+    list-style-position: inherit;
+
 
   }
+
+
+  & [type="radio"] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+
+
+    &:checked + label {
+      color: var(--color-very-dark-blue);
+      background-color: var(--color-white);
+    }
+  }
+
 
 
   &__rating {
@@ -49,19 +65,39 @@
     background-color: var(--color-dark-blue);
     border-radius: var(--border-radius-rating-numbers);
     padding: var(--padding-rating-buttons);
-    aspect-ratio: 1/1;
-    width: 50px;
+
     text-align: center;
+    vertical-align: center;
+    font-weight: var(--font-weight-bold);
+
+    aspect-ratio: 1;
+    height: 100%;
+
+    &:hover {
+      color: var(--color-very-dark-blue);
+      cursor: pointer;
+      background-color: var(--color-orange);
+    }
+
   }
 
 
-  &__submit{
+
+  &__submit {
     border: none;
     width: 100%;
-    color: var(--color-white);
+    color: var(--color-very-dark-blue);
+    font-weight: var(--font-weight-bold);
     padding: var(--padding-submit-button);
     background-color: var(--color-orange);
     border-radius: var(--border-radius-submit-button);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+
+    &:hover {
+      cursor: pointer;
+      background-color: var(--color-white);
+    }
   }
 
   @include utils.desktop-size {

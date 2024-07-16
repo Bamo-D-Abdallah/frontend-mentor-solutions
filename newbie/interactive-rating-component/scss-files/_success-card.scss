@@ -1,0 +1,41 @@
+@use "utils";
+
+
+.success-card {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: var(--border-radius-card);
+  row-gap: var(--gap-row-card);
+  padding: 2em;
+  background-image: linear-gradient(to bottom, #232A34, #181E27);
+
+
+  &__tag {
+    font-size: var(--font-size-paragraph);
+    background-color: var(--color-dark-blue);
+    color: var(--color-orange);
+    padding: var(--padding-tag);
+    border-radius: 1em;
+  }
+
+  &__header {
+    color: var(--color-white);
+    font-size: var(--font-size-header);
+    text-align: center;
+  }
+
+
+  &__paragraph {
+    font-size: var(--font-size-paragraph);
+    color: var(--color-light-grey);
+    line-height: 2;
+    text-align: center;
+  }
+
+  @include utils.desktop-size {
+    max-width: utils.toRem(412);
+    border-radius: var(--);
+  }
+}

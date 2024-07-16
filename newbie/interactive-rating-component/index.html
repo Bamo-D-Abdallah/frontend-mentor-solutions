@@ -12,6 +12,7 @@
 
   <link rel="stylesheet" href="styles.css" />
 
+  <script src="app.js" defer></script>
   <title>Frontend Mentor | Interactive rating component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -26,29 +27,44 @@
 
   <main>
 
-    <div class="submit-card active">
+    <form class="submit-card js-submit-card">
       <div class="submit-card__icon-container">
         <img class="submit-card__icon" src="images/icon-star.svg" alt="star icon" />
       </div>
-      <h2 class="submit-card__header">How did we do?</h2>
-      <p class="submit-card__paragraph">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
-      <ol class="submit-card__rating-container">
-        <li class="submit-card__rating">1</li>
-        <li class="submit-card__rating">2</li>
-        <li class="submit-card__rating">3</li>
-        <li class="submit-card__rating">4</li>
-        <li class="submit-card__rating">5</li>
-      </ol>
-      <button class="submit-card__submit">submit</button>
-    </div>
+
+      <hgroup>
+        <h2 class="submit-card__header">How did we do?</h2>
+        <p class="submit-card__paragraph">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+      </hgroup>
+      <div class="submit-card__rating-container">
+        <input class="js-radio" id="rating-1" type="radio" name="radio" value="1">
+        <label class="submit-card__rating" for="rating-1" tabindex="1">1</label>
+
+        <input class="js-radio" id="rating-2" type="radio" name="radio" value="2">
+        <label class="submit-card__rating" for="rating-2" tabindex="2">2</label>
+
+        <input class="js-radio" id="rating-3" type="radio" name="radio" value="3">
+        <label class="submit-card__rating" for="rating-3" tabindex="3">3</label>
+
+        <input class="js-radio" id="rating-4" type="radio" name="radio" value="4">
+        <label class="submit-card__rating" for="rating-4" tabindex="4">4</label>
+
+        <input class="js-radio" id="rating-5" type="radio" name="radio" value="5">
+        <label class="submit-card__rating" for="rating-5" tabindex="5">5</label>
+      </div>
+      <input type="submit" class="submit-card__submit js-submit" tabindex="6">
+    </form>
 
 
 
-    <div class="success-card" style="display: none">
+    <div class="success-card js-success-card" style="display: none">
       <img src="images/illustration-thank-you.svg" alt="An image of a mobile phone">
-      <p class="success-card__tag"></p>
-      <h2 class="success-card__header">Thank you!</h2>
-      <p class="success-card__paragraph">We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
+      <p class="success-card__tag js-tag">You selected 4 out of 5</p>
+
+      <hgroup>
+        <h2 class="success-card__header">Thank you!</h2>
+        <p class="success-card__paragraph">We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
+      </hgroup>
     </div>
   </main>
 

@@ -30,7 +30,7 @@ $font-weights: (
 
   /* Font sizes */
   --font-size-header: 1.5rem;
-  --font-size-paragraph: 0.75rem;
+  --font-size-paragraph: 0.85rem;
   --font-size-submit: 0.75rem;
   --font-size-button-numbers: 0.75rem;
 
@@ -44,21 +44,22 @@ $font-weights: (
 
 
   /* Padding */
-  --pading-icon-: 0.75em;
-  --padding-rating-buttons: 1em;
+  --pading-icon-: 1em;
+  --padding-rating-buttons: 4%;
   --padding-submit-button: 0.5em;
-  --padding-submit-card: 2em;
+  --padding-cards: 2em;
+  --padding-tag: 0.5em 0.75em;
 
   /* Border Radius */
-  --border-radius-submit-card: 1em;
+  --border-radius-card: clamp(1em, 5vw, 1.5em);
   --border-radius-icon: 50%;
-  --border-radius-rating-numbers: 50%;
+  --border-radius-rating-numbers: 100%;
   --border-radius-submit-button: 2em;
 
 
   /* Gaps */
-  --gap-row-submit-card: 1em;
-  --gaps-column-rating-buttons: 1.5em;
+  --gap-row-card: 1.5em;
+  --gaps-column-rating-buttons: 3%;
 
 }
 
