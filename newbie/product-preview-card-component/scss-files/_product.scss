@@ -1,0 +1,106 @@
+@use "utils";
+
+.product {
+  background-color: var(--clr-white);
+
+  hgroup {
+    @include utils.desktop-size {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1.5em;
+
+    }
+
+  }
+
+  @include utils.mobile-size {
+    max-width: 22rem;
+    border-radius: 0.75rem;
+    overflow: hidden;
+  }
+
+
+  @include utils.desktop-size {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 43.5rem;
+  }
+
+
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.5rem;
+
+    @include utils.desktop-size {
+      padding: 2.5em;
+    }
+
+
+  }
+
+  &__tag {
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    font-size: 0.75rem;
+    font-weight: var(--fw-regular);
+    color: var(--clr-dark-grayish-blue);
+    font-family: var(--fm-secondary), sans-serif;
+  }
+
+  &__header {
+    font-family: var(--fm-primary), sans-serif;
+    font-weight: var(--fw-bold);
+    font-size: clamp(2rem, 1.5rem + 2vw, 2.5rem);
+    color: var(--clr-very-dark-blue);
+  }
+
+  &__body {
+    color: var(--clr-dark-grayish-blue);
+    font-size: 1.09rem;
+    line-height: 1.5;
+  }
+
+  &__price-container {
+    display: flex;
+    column-gap: 1em;
+    align-items: center;
+  }
+
+  &__discount-price {
+    color: var(--clr-dark-cyan);
+    font-size: 2rem;
+    font-weight: var(--fw-bold);
+    font-family: var(--fm-primary), sans-serif;
+  }
+
+  &__original-price {
+    color: var(--clr-dark-grayish-blue);
+    text-decoration: line-through var(--clr-dark-grayish-blue);
+    font-size: 0.75rem;
+    font-weight: var(--fw-regular);
+    font-family: var(--fm-secondary), sans-serif;
+  }
+
+  &__add-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    color: var(--clr-white);
+    border: none;
+    padding: 1.25em;
+    border-radius: 0.75rem;
+    background-color: var(--clr-dark-cyan);
+    font-size: 0.75rem;
+    font-family: var(--fm-secondary), sans-serif;
+    font-weight: var(--fw-regular);
+  }
+
+
+
+
+}

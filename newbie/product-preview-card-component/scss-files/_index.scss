@@ -1,0 +1,19 @@
+@forward "utils";
+@forward "normalize";
+@forward "body";
+@forward "main";
+@forward "product";
+
+
+p,
+h1 {
+  margin: 0;
+}
+
+
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
