@@ -383,7 +383,7 @@ main {
 
 .cards-container {
   display: grid;
-  gap: 1em;
+  gap: 2em;
 }
 @media (min-width: 54.6875rem) {
   .cards-container {
@@ -396,7 +396,7 @@ main {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 1.5rem;
+  padding: 2rem;
   row-gap: 0.5rem;
 }
 .card__header {

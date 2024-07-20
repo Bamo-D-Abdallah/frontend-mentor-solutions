@@ -2,7 +2,7 @@
 
 .cards-container {
   display: grid;
-  gap: 1em;
+  gap: 2em;
 
   @include breakpoints.desktop-size {
     grid-template-areas:
@@ -22,7 +22,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 1.5rem;
+  padding: 2rem;
   row-gap: 0.5rem;
 
   &__header {
