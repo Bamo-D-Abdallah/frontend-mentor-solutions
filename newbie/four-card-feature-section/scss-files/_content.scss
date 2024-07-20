@@ -14,6 +14,10 @@
       font-weight: var(--fw-regular);
     }
 
+    @include breakpoints.desktop-size {
+      font-size: 2rem;
+    }
+
     &--strong {
       color: var(--clr-very-dark-blue);
       font-weight: var(--fw-bold);

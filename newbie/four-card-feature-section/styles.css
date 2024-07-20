@@ -356,6 +356,11 @@ main {
   color: var(--clr-grayish-blue);
   font-weight: var(--fw-regular);
 }
+@media (min-width: 54.6875rem) {
+  .content__header {
+    font-size: 2rem;
+  }
+}
 .content__header--strong {
   color: var(--clr-very-dark-blue);
   font-weight: var(--fw-bold);
