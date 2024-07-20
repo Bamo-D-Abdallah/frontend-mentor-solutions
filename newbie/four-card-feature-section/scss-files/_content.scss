@@ -1,0 +1,38 @@
+@use "breakpoints";
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5em;
+
+  &__header {
+    font-size: 1.25rem;
+    &--regular {
+      color: var(--clr-grayish-blue);
+      font-weight: var(--fw-regular);
+    }
+
+    &--strong {
+      color: var(--clr-very-dark-blue);
+      font-weight: var(--fw-bold);
+    }
+
+    br {
+      margin-block-end: 0.5rem
+    }
+  }
+
+  &__paragraph {
+    color: var(--clr-grayish-blue);
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: var(--fw-regular);
+    line-height: 1.25;
+
+    @include breakpoints.mobile-size {
+      max-width: 25rem;
+    }
+  }
+}

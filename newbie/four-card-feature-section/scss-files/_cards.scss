@@ -1,0 +1,91 @@
+@use "breakpoints";
+
+.cards-container {
+  display: grid;
+  gap: 1em;
+
+  @include breakpoints.desktop-size {
+    grid-template-areas:
+    ". r ."
+    "c r b"
+    "c o b"
+    ". o ."
+  ;
+
+  }
+
+}
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1.5rem;
+  row-gap: 0.5rem;
+
+  &__header {
+    color: var(--clr-very-dark-blue);
+    font-weight: var(--fw-bold);
+    font-size: 1rem;
+  }
+
+  &__paragraph {
+    font-size: 0.75rem;
+    line-height: 1.75;
+    color: var(--clr-grayish-blue);
+
+
+
+  }
+
+  img {
+    align-self: flex-end;
+  }
+
+  @include breakpoints.mobile-size {
+    background-color: white;
+    max-width: 17rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.5rem 0.5rem  1rem -0.5rem var(--clr-grayish-blue);
+
+  }
+
+
+
+  &--cyan {
+    border-top: 0.25rem solid var(--clr-cyan);
+
+    @include breakpoints.desktop-size {
+      grid-area: c;
+    }
+  }
+
+  &--red {
+    border-top: 0.25rem solid var(--clr-red);
+
+    @include breakpoints.desktop-size {
+      grid-area: r;
+    }
+
+  }
+
+  &--orange {
+    border-top: 0.25rem solid var(--clr-orange);
+
+    @include breakpoints.desktop-size {
+      grid-area: o;
+    }
+  }
+
+  &--blue {
+    border-top: 0.25rem solid var(--clr-blue);
+
+    @include breakpoints.desktop-size {
+      grid-area: b;
+    }
+  }
+
+
+}
