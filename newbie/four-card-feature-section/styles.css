@@ -402,7 +402,7 @@ main {
 .card__header {
   color: var(--clr-very-dark-blue);
   font-weight: var(--fw-bold);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 .card__paragraph {
   font-size: 1rem;
