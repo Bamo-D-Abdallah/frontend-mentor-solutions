@@ -421,6 +421,9 @@ main {
   font-family: var(--fm-secondary), sans-serif;
   font-weight: var(--fw-regular);
 }
+.product__add-button:hover {
+  background-color: #255d00;
+}
 
 p,
 h1 {

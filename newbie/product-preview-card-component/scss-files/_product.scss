@@ -98,6 +98,10 @@
     font-size: 0.75rem;
     font-family: var(--fm-secondary), sans-serif;
     font-weight: var(--fw-regular);
+
+    &:hover {
+      background-color: #255D00FF;
+    }
   }
 
 
