@@ -318,7 +318,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--clr-light-gray);
+  background-color: var(--clr-light-grayish-blue);
   font-family: var(--fm-primary), sans-serif;
 }
 
@@ -355,7 +355,7 @@ main {
 .card {
   display: flex;
   flex-direction: column;
-  padding: 1.25rem;
+  padding: 1.5rem;
   row-gap: 1.5rem;
   background-repeat: no-repeat;
   background-position: top right 1rem;
@@ -424,7 +424,7 @@ main {
 }
 .card__paragraph {
   color: var(--clr-white);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: var(--fw-bold);
 }
 .card__paragraph--dark-grayish {
@@ -432,6 +432,7 @@ main {
 }
 .card__quote {
   color: var(--clr-light-gray);
+  font-size: 1rem;
 }
 .card__quote--dark-grayish {
   color: var(--clr-very-dark-grayish);

@@ -4,7 +4,7 @@
 .card {
   display: flex;
   flex-direction: column;
-  padding: 1.25rem;
+  padding: 1.5rem;
   row-gap: 1.5rem;
   background-repeat: no-repeat;
   background-position: top right 1rem;
@@ -96,7 +96,7 @@
 
   &__paragraph {
     color: var(--clr-white);
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: var(--fw-bold);
 
     &--dark-grayish {
@@ -106,6 +106,7 @@
 
   &__quote {
     color: var(--clr-light-gray);
+    font-size: 1rem;
 
     &--dark-grayish {
       color: var(--clr-very-dark-grayish);
