@@ -1,0 +1,32 @@
+@use "breakpoints" as breakpoints;
+@use "functions" as functions;
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-light-gray);
+  font-family: var(--fm-primary), sans-serif;
+
+}
+
+
+main {
+  display: grid;
+  justify-content: center;
+  gap: 1.5rem;
+
+
+  @include breakpoints.mobile-size {
+    margin-block: 2rem;
+    padding: 1rem;
+  }
+
+  @include breakpoints.desktop-size {
+    max-inline-size: functions.toRem(1110);
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+}

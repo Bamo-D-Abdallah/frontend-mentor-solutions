@@ -1,0 +1,15 @@
+@use "functions";
+
+@mixin mobile-size {
+  @media (min-width: functions.toRem(375)) {
+    @content
+  }
+}
+
+
+@mixin desktop-size {
+  @media (min-width: functions.toRem(875)) {
+    @content
+  }
+}
+
