@@ -54,7 +54,7 @@ body {
 
 main {
     display: flex;
-    min-height: 100%;
+    min-height: 100vh;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -294,7 +294,7 @@ main {
     }
 
     .section1-container {
-        max-width: 40rem;
+        max-width: 30rem;
     }
 
     .content {
