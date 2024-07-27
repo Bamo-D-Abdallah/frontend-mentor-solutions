@@ -48,19 +48,22 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 body {
+    min-height: 100vh;
     font-family: var(--font), sans-serif;
 }
 
 main {
     display: flex;
+    min-height: 100%;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 3rem;
 }
 
 .title {
     font-size: var(--font-size-h1);
+    font-weight: 700;
     line-height: 1;
     color: var(--clr-black);
 }
@@ -291,7 +294,7 @@ main {
     }
 
     .section1-container {
-        max-width: 50rem;
+        max-width: 40rem;
     }
 
     .content {
