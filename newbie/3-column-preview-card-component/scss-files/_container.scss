@@ -1,0 +1,89 @@
+@use "breakpoints";
+@use "functions" as f;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+  @include breakpoints.desktop {
+    flex-direction: row;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 3rem;
+  row-gap: 1.5rem;
+  width: 100%;
+
+  @include breakpoints.mobile {
+    max-width: f.toRem(327);
+  }
+
+  &__header {
+    text-transform: uppercase;
+    color: var(--color-white);
+    font-family: var(--font-family-primary);
+    font-weight: var(--fw-bold);
+    font-size: f.toRem(40);
+  }
+
+  &__text {
+    color: var(--color-transparent-white);
+    font-size: f.toRem(15);
+    font-family: var(--font-family-secondary);
+    font-weight: var(--fw-regular);
+  }
+
+  &__link {
+    background-color: var(--color-white);
+    font-size: f.toRem(15);
+    padding: f.toRem(15) f.toRem(30);
+    border: f.toRem(2) solid var(--color-white);
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: var(--fw-regular);
+    font-family: var(--font-family-secondary);
+
+    &:hover {
+      transition:
+        color,
+        background-color 0.25s;
+      cursor: pointer;
+      background-color: transparent;
+      color: var(--color-white);
+    }
+
+    @include breakpoints.desktop {
+      margin-block-start: f.toRem(68);
+    }
+
+    &--orange {
+      color: var(--color-bright-orange);
+    }
+
+    &--light-green {
+      color: var(--color-dark-cyan);
+    }
+
+    &--dark-green {
+      color: var(--color-very-dark-cyan);
+    }
+  }
+
+  &--orange {
+    background-color: var(--color-bright-orange);
+  }
+
+  &--light-green {
+    background-color: var(--color-dark-cyan);
+  }
+
+  &--dark-green {
+    background-color: var(--color-very-dark-cyan);
+  }
+}

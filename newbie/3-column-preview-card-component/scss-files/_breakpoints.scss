@@ -1,0 +1,13 @@
+@use "functions" as f;
+
+@mixin mobile {
+  @media (min-width: f.toRem(375)) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: f.toRem(1000)) {
+    @content;
+  }
+}

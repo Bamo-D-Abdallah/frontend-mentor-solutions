@@ -1,0 +1,10 @@
+@use "functions" as f;
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  background-color: var(--color-white);
+  padding: f.toRem(88) 0;
+}
