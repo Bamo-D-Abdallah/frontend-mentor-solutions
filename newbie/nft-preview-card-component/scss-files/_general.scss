@@ -1,0 +1,40 @@
+*::before,
+*,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+body {
+    background-color: var(--color-dark-blue-main-bg);
+    min-height: 100vh;
+    font-family: var(--font-family-primary);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 98vh;
+}
+
+.icon-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: fit-content;
+
+    & > span {
+        margin-left: 0.5rem;
+    }
+}

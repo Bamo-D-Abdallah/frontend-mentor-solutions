@@ -1,0 +1,126 @@
+@use "functions" as f;
+@use "breakpoints";
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 1.25rem;
+    max-width: 90%;
+    padding: f.toRem(30);
+    padding-block-end: f.toRem(6);
+    background-color: var(--color-dark-blue-card-bg);
+    row-gap: 0.25rem;
+    max-width: f.toRem(327);
+
+    &__main-image {
+        border-radius: 0.5rem;
+        position: relative;
+
+        & > img {
+            border-radius: 0.5rem;
+        }
+    }
+
+    &__main-image-overlay {
+        border-radius: inherit;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+
+        &:hover {
+            cursor: pointer;
+            background-image: url("../images/icon-view.svg");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-color: #00fff775;
+            transition: background-color 0.25s;
+        }
+    }
+
+    /* &__image-container {
+    } */
+
+    &__header {
+        font-size: f.toRem(24);
+        color: var(--color-white);
+        font-weight: var(--font-weight-bold);
+
+        &:hover {
+            color: var(--color-cyan);
+            cursor: pointer;
+            transition: color 0.25s;
+        }
+    }
+
+    &__text {
+        font-size: f.toRem(18);
+        color: var(--color-soft-blue);
+        line-height: 1.6;
+        font-weight: var(--font-weight-light);
+    }
+
+    &__point-container {
+        display: flex;
+        justify-content: space-between;
+        border-block-end: 0.05rem solid #2e405a;
+        padding-block: 1rem;
+
+        & img {
+            height: 1rem;
+            width: 1rem;
+        }
+    }
+
+    &__point {
+        display: flex;
+        align-items: center;
+        color: var(--color-cyan);
+        font-weight: var(--font-weight-bold);
+        font-size: f.toRem(15);
+    }
+
+    &__days {
+        color: var(--color-soft-blue);
+    }
+
+    &__user-container {
+        display: flex;
+        align-items: center;
+        padding-block: 1rem;
+
+        & > img {
+            height: 2.5rem;
+            width: 2.5rem;
+            border: f.toRem(1.9) solid var(--color-white);
+            border-radius: 50%;
+        }
+    }
+
+    &__user {
+        color: var(--color-soft-blue);
+        margin-inline-start: 1rem;
+        font-size: f.toRem(17);
+        font-weight: var(--font-weight-balanced);
+
+        & > span {
+            color: var(--color-white);
+            &:hover {
+                transition: color 0.25s;
+                cursor: pointer;
+                color: var(--color-cyan);
+            }
+        }
+    }
+
+    &__point-container,
+    &__user-container {
+        width: 100%;
+    }
+
+    @include breakpoints.middle {
+        max-width: f.toRem(350);
+    }
+}

@@ -1,0 +1,7 @@
+@use "functions" as f;
+
+@mixin middle {
+    @media (min-width: f.toRem(850)) {
+        @content;
+    }
+}
