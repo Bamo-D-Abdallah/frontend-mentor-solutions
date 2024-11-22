@@ -1,0 +1,134 @@
+@use "functions" as f;
+@use "breakpoints" as breakpoint;
+
+.card {
+  display: grid;
+  font-family: karla;
+  grid-template-areas:
+    "inf"
+    "sub"
+    "rea";
+  border-radius: 0.35em 0.35rem 0 0;
+
+  @include breakpoint.desktop {
+    border-radius: 0.5em;
+  }
+  overflow: hidden;
+
+  @include breakpoint.mobile {
+    max-inline-size: f.toRem(311);
+  }
+
+  @include breakpoint.desktop {
+    max-inline-size: f.toRem(635);
+    grid-template-areas:
+      "inf inf"
+      "sub rea";
+  }
+
+  & > section {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    row-gap: 1rem;
+  }
+
+  &__header {
+    font-size: clamp(f.toRem(20), 2.5vw + 0.01rem, f.toRem(24));
+    font-weight: var(--fw-bold);
+
+    &--white {
+      color: #ffffff;
+    }
+
+    &--green {
+      color: var(--color-cyan);
+    }
+  }
+}
+
+.information {
+  background-color: #ffffff;
+  grid-area: inf;
+
+  &__subheader {
+    color: var(--color-yellow);
+    font-size: clamp(f.toRem(15), 2.5vw + 0.01rem, f.toRem(18));
+    font-weight: var(--fw-bold);
+  }
+
+  &__body {
+    font-size: clamp(f.toRem(14), 2.5vw + 0.1rem, f.toRem(16));
+    color: var(--color-blue);
+    font-weight: var(--fw-regular);
+    font-size: f.toRem(14);
+    line-height: 2;
+  }
+}
+
+.subscription {
+  background-color: var(--color-cyan);
+  grid-area: sub;
+
+  & > h2 {
+    font-size: f.toRem(18);
+  }
+
+  &__price-container > div {
+    display: flex;
+    align-items: center;
+    column-gap: 0.8rem;
+  }
+
+  &__price {
+    font-size: 2rem;
+    font-weight: var(--fw-bold);
+    color: #fff;
+  }
+
+  &__timeline {
+    font-size: 1rem;
+    color: #ffffff81;
+  }
+
+  &__simple {
+    color: #fff;
+  }
+
+  &__button {
+    background-color: var(--color-yellow);
+    border: none;
+    border-radius: 0.3em;
+    padding-block: 0.8rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: var(--fw-bold);
+    box-shadow: 0 0.5rem 1rem #00000025;
+    margin-block-start: 1rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.reasons {
+  grid-area: rea;
+  background-color: #2ab2afbf;
+
+  & > h2 {
+    font-size: f.toRem(18);
+  }
+
+  &__list {
+    padding: 0;
+    list-style-type: none;
+    list-style-image: none;
+    list-style-position: inside;
+  }
+
+  &__list-item {
+    color: var(--color-gray);
+    font-size: f.toRem(14);
+  }
+}
