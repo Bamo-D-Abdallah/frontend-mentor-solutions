@@ -1,0 +1,77 @@
+@use "breakpoints";
+@use "functions";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 1rem;
+  font-family: "Red Hat Display", sans-serif;
+  box-shadow: 0 0.25rem 1.5rem hsla(224, 23%, 55%, 0.5);
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 1.5rem;
+    row-gap: 1.5rem;
+
+    @include breakpoints.desktop {
+      padding: 1.75rem;
+      row-gap: 1.75rem;
+    }
+  }
+
+  &__header {
+    color: var(--color-dark-blue);
+    font-weight: var(--fw-bolder);
+    text-align: center;
+    font-size: functions.toRem(22);
+  }
+
+  &__body {
+    font-size: functions.toRem(15);
+    color: var(--color-desaturated-blue);
+    font-weight: var(--fw-regular);
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  &__proceed {
+    background-color: var(--color-bright-blue);
+    border: none;
+    color: #fff;
+    font-weight: var(--fw-bolder);
+    padding-block: 1rem;
+    border-radius: 0.75rem;
+    font-size: functions.toRem(15);
+    box-shadow: 0 0.25rem 1.5rem hsla(245, 75%, 52%, 0.6);
+
+    &:hover {
+      cursor: pointer;
+      background-color: #766cf1;
+    }
+  }
+
+  &__cancel {
+    background-color: transparent;
+    font-size: functions.toRem(15);
+    font-weight: var(--fw-bolder);
+    color: var(--color-desaturated-blue);
+    border: none;
+
+    &:hover {
+      color: var(--color-dark-blue);
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+
+  @include breakpoints.mobile {
+    max-inline-size: 90%;
+  }
+
+  @include breakpoints.desktop {
+    max-inline-size: functions.toRem(450);
+  }
+}

@@ -1,0 +1,26 @@
+@use "breakpoints" as breakpoints;
+
+body {
+  background-image: url("../images/pattern-background-mobile.svg");
+  background-color: var(--color-pale-blue);
+  background-position: top;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+
+  @include breakpoints.desktop {
+    background-image: url("../images/pattern-background-desktop.svg");
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+}

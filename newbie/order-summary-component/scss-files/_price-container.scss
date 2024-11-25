@@ -1,0 +1,55 @@
+@use "functions" as functions;
+@use "breakpoints";
+
+.price-container {
+  display: grid;
+  background-color: var(--color-very-pale-blue);
+  padding: 0.75rem;
+  border-radius: 0.75em;
+  grid-template-areas:
+    "img dur btn"
+    "img prc btn";
+  align-items: center;
+
+  &__image {
+    grid-area: img;
+  }
+
+  &__duration {
+    grid-area: dur;
+    font-weight: var(--fw-bolder);
+    font-size: functions.toRem(14);
+    color: var(--color-dark-blue);
+    justify-self: start;
+  }
+
+  &__price {
+    grid-area: prc;
+    font-size: functions.toRem(14);
+    color: var(--color-desaturated-blue);
+    font-weight: var(--fw-regular);
+    justify-self: start;
+  }
+
+  &__button {
+    grid-area: btn;
+    border: none;
+    background-color: transparent;
+    color: var(--color-bright-blue);
+    font-weight: var(--fw-bold);
+    text-decoration: solid underline;
+    font-family: inherit;
+
+    &:hover {
+      color: #766cf1;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+
+  @include breakpoints.desktop {
+    grid-template-areas:
+      "img dur dur btn"
+      "img prc prc btn";
+  }
+}

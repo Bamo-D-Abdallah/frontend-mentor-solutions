@@ -1,0 +1,14 @@
+@use "functions";
+
+@mixin mobile {
+  @media (min-width: functions.toEm(375)) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: functions.toEm(450)) {
+    @content;
+  }
+}
+
